@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Box, Grommet, ResponsiveContext } from 'grommet';
 import { hpe } from 'grommet-theme-hpe';
-import { AppHeader, AppMain, AppSidebar } from '../components';
+import { AppHeader, AppSidebar } from '.';
 
-export default function Home() {
+export const Infra = ({ children }) => {
   const size = React.useContext(ResponsiveContext);
 
   return (
@@ -18,9 +19,17 @@ export default function Home() {
         <AppSidebar />
         <Box flex overflow="auto" a>
           <AppHeader />
-          <AppMain />
+          {children}
         </Box>
       </Box>
     </Grommet>
   );
-}
+};
+
+Infra.propTypes = {
+  children: PropTypes.object,
+};
+
+Infra.defaultProps = {
+  children: PropTypes.node,
+};
