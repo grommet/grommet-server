@@ -35,7 +35,9 @@ const MainNavigation = () => (
       <Button icon={<Projects />} hoverIndicator />
     </Link>
     <Button icon={<Flows />} hoverIndicator />
-    <Button icon={<Time />} hoverIndicator />
+    <Link key="analytics" href="analytics">
+      <Button icon={<Time />} hoverIndicator />
+    </Link>
     <Button icon={<Console />} hoverIndicator />
     <Button icon={<Configure />} hoverIndicator />
   </Nav>

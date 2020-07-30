@@ -1,3 +1,4 @@
+export { AnalyticsLayout } from './analytics/AnalyticsLayout';
 export { AppHeader } from './AppHeader';
 export { AppSidebar } from './AppSidebar';
 export { AppMain } from './AppMain';
